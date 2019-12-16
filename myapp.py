@@ -19,16 +19,16 @@ def predict():
     x = cv.transform([text])
     
     x = x.toarray()
-    
-    str1= str(model.predict(x))
     '''
+    str1= str(model.predict(x))
+    
     if str1=='[1]':
         return ('<h1>' + request.form['Name']+" liked the restaurant" + '</h1>')
     else:
         return('<h1>' + request.form['Name']+" Not liked the restaurant" + '</h1>')
      
     '''
-    return "Hi Welcome to nlp "+str1
+    return "Hi Welcome to nlp "+request.form['Feedback']
     
 
 if __name__ =='__main__':
