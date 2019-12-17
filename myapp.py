@@ -22,10 +22,10 @@ def predict():
     X = CV_model.transform([msg]).toarray()
     output = RF_model.predict(X)[0]
     if output==1:
-        return request.form['Name'] + ' is Liked the restaurant'
+        return request.form['Name'] + ' Liked the restaurant'
     else:
-        return request.form['Name'] + ' is Didnt Liked the restaurant'
+        return request.form['Name'] + ' Didnt Liked the restaurant'
     
 
 if __name__ =='__main__':
-    app.run(debug = True)
+    app.run()
